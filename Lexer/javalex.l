@@ -5,7 +5,7 @@ FILE* yyin;
 DIGIT [0-9]
 TEXT [A-Za-z]
 INT {DIGIT}+
-FLOAT {DIGIT}*[.]{INT}
+FLOAT ({DIGIT}*[.]{INT})
 OPERATOR "+"|"-"|"/"|"%"|"*"
 LOGICAL_OP "&&"|"||"|"!"
 RELATIONS "<"|">"|"<="|">="|"=="|"!="
@@ -16,7 +16,7 @@ DATATYPE "int"|"float"|"double"|"long"|"void"|"String"
 CONDITIONAL "if"|"else"|"else if"|"switch"|"case"
 LOOP "for"|"while"|"do"
 IDENTIFIER {TEXT}({DIGIT}|{TEXT}|"_")*
-FUNCTION {ACCESS}{DATATYPE}{IDENTIFIER}"("({DATATYPE}{IDENTIFIER})*")"
+FUNCTION ({ACCESS}" "{DATATYPE}" "{IDENTIFIER}"("({DATATYPE}" "{IDENTIFIER})*")")
 SEMICOLON ";"
 
 %%
