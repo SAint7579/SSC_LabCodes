@@ -1,5 +1,21 @@
 %{
 FILE* yyin;
+#include<stdio.h>
+#include<string.h>
+struct SymbolTable
+{
+	char symbol[10];
+	char type[10];	
+}SymbolTable[10];
+void insert();
+int search();
+void display();
+char data[10];
+char type[10];
+//For counter
+int count = 0;
+int i=0;
+
 %}
 
 DIGIT [0-9]
@@ -42,14 +58,52 @@ SEMICOLON ";"
 ")"  {printf("%s\t==> PARENTHESIS END\n",yytext);}
 . ;
 %%
+
+
 int yywrap()
 {
 	return 1;
+}
+void insert()
+{
+	if(search(data)==0)
+	{
+		strcpy(SymbolTable[count].symbol,data);
+		strcpy(SymbolTable[count].type,type);
+		++count;
+	}
+}
+int search()
+{
+	for(int i=0; i<count;i++)
+	{
+		if(strcmp(SymbolTable[i].symbol,data)==0)
+			return 1;
+	}
+	return 0;
+}
+void display()
+{
+	for(int i=0; i<count;i++)
+	{
+		printf("\n%s\t%s",SymbolTable[i].symbol,SymbolTable[i].type);
+	}
 }
 
 int main(int argc,char* argv[])
 {
 	yyin=fopen(argv[1],"r");
-	yylex();
+
+	while(i=yylex())
+	{
+		printf("%d",i);s
+		if(i==5)
+		{
+			insert();
+			printf("\t%s", data);
+		}
+	}
+	display();
 	fclose(yyin);
+	yywrap();
 }
