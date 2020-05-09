@@ -463,8 +463,10 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "token.l.bak"
-#line 468 "lex.yy.c"
+#line 1 "token.l"
+#line 2 "token.l"
+#line 469 "lex.yy.c"
+#line 470 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -681,10 +683,10 @@ YY_DECL
 		}
 
 	{
-#line 1 "token.l.bak"
+#line 4 "token.l"
 
 
-#line 688 "lex.yy.c"
+#line 690 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -743,106 +745,106 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 3 "token.l.bak"
-return WHILE;
+#line 6 "token.l"
+{return WHILE;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 4 "token.l.bak"
-return IF;
+#line 7 "token.l"
+{return IF;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 5 "token.l.bak"
-return DO;
+#line 8 "token.l"
+{return DO;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 6 "token.l.bak"
-return FOR;
+#line 9 "token.l"
+{return FOR;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 7 "token.l.bak"
-return OP;
+#line 10 "token.l"
+{return OP;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 8 "token.l.bak"
-return CP;
+#line 11 "token.l"
+{return CP;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 9 "token.l.bak"
-return OCB;
+#line 12 "token.l"
+{return OCB;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 10 "token.l.bak"
-return CCB;
+#line 13 "token.l"
+{return CCB;}
 	YY_BREAK
 case 9:
-#line 13 "token.l.bak"
+#line 16 "token.l"
 case 10:
-#line 14 "token.l.bak"
+#line 17 "token.l"
 case 11:
-#line 15 "token.l.bak"
+#line 18 "token.l"
 case 12:
-#line 16 "token.l.bak"
+#line 19 "token.l"
 case 13:
-#line 17 "token.l.bak"
+#line 20 "token.l"
 case 14:
 YY_RULE_SETUP
-#line 17 "token.l.bak"
-return CMP;
+#line 20 "token.l"
+{return CMP;}
 	YY_BREAK
 case 15:
-#line 20 "token.l.bak"
+#line 23 "token.l"
 case 16:
-#line 21 "token.l.bak"
+#line 24 "token.l"
 case 17:
-#line 22 "token.l.bak"
+#line 25 "token.l"
 case 18:
 YY_RULE_SETUP
-#line 22 "token.l.bak"
-return OPR;
+#line 25 "token.l"
+{return OPR;}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 23 "token.l.bak"
-return ASG;
+#line 27 "token.l"
+{return ASG;}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 25 "token.l.bak"
-return ID;
+#line 29 "token.l"
+{return ID;}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 26 "token.l.bak"
-return NUM;
+#line 30 "token.l"
+{return NUM;}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 27 "token.l.bak"
-return SCOLON;
+#line 31 "token.l"
+{return SCOLON;}
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 28 "token.l.bak"
-return COMMA
+#line 32 "token.l"
+{return COMMA;}
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 29 "token.l.bak"
+#line 33 "token.l"
 {}
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 31 "token.l.bak"
+#line 35 "token.l"
 ECHO;
 	YY_BREAK
-#line 846 "lex.yy.c"
+#line 848 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1847,12 +1849,10 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 31 "token.l.bak"
-
+#line 35 "token.l"
 
 int yywrap()
 {
 	return 1;
 }
-
 
